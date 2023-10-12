@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  z-index: 1;
+  color: white;
+  background: #0c1015;
+  padding: 40px;
+  height: 90vh;
+}
+h1 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+h4 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #c92b2b;
+  margin: 7px 0 26px 0;
+}
+p {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.swiper {
+  z-index: 2;
+  margin-right: 0;
+  padding: 50px;
+  background: #24292f;
+  width: 55%;
+  height: 540px;
+}
+
+/* Style the custom pagination container */
+.custom-pagination {
+  width: 40%;
+  height: 540px;
+  /* z-index: 10; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 9px;
+  position: fixed;
+  top: 48px;
+  left: 50px;
+}
+
+/* Style the custom bullets with background images */
+.custom-bullet {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  gap: 9px;
+  margin: 0px; /* Adjust the spacing between bullets */
+}
+
+/* Set background images for each bullet using the data-index attribute */
+.custom-bullet[data-index="0"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/c3bc/d288/953ca91f376c7885f3fde2a4af798b92?Expires=1698019200&Signature=cZ8xeEUyh8umDrVsYQi-TVIpL3YGrspE1VzdtMomr~kWMjvF2-Ddhv1UEQObbSb2qWH40kR9LAisXSfcdn0Y~Ei5psdoolF4rd6tSiv4fhyGtgDyrLfVaeePYK-Eo33PLflYt02puaVVjW0zAgSvPtrKKj3R2v8Xh~D6CtOdzMacLMdH4Yt1mVVY6fPkg2GAuG9RnsYeiFbSbXC5z39tzVDAxxY7EOsQgHxB1Q33RqWmdKVHVzTO3S2kySVBpbWC8bBjmwfLnCl8Jh-7vdTtv~ETeXyiKHFy54RGELSFL8p8OUrOQZY2Wi1Iwq84uIRQS0URzm1lOqQ5nQ8LRB~g~Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.custom-bullet[data-index="1"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/d030/e9d3/0936aef3b4a83e13318fa114da030d05?Expires=1698019200&Signature=En4At-UzSwrW0fZ3in2COVZ6lQKpgnuM0~B-Ssd2uNN33Xr8N1Z-JY3GOZ8l1pnva4AcqjVQwNK7~~FL3e4sJ8VXPy7JNEGAQQ6ncigCGEA3wGRPIGGbnKkO6Sx2246qBseeZiUvldQWAgIClLBFGOtaOfpaXwdmrJ~UvpQvcKvud~-bcfo~5Rm9ds6Ixfu3~hLF-ix0E1XxMSl0AH~Cd1~fqHNEBVXXpoJewcqbFeXJvfb09lL5mYgLrB0fZpO3iUsnKzdRA6TFfp~HWQPU2nxBZie~lGXyLf4U-JbUX58556sLu2qiv8ewXfMqzCE5CDmk1ohKvw7NYmO5DOBXEA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.custom-bullet[data-index="2"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/bfa1/64e6/c9e4d83b17a7269dee7073f1ce540a0d?Expires=1698019200&Signature=CUuNnWWWdDQzfa8IF1fTTRNUcHIMxIyGts1aXh0wl0qiohQkigI3qqqaPvXsPXFmWFBnkTJgDnlIprJY3--aFBpdwjAblmzip1QWhFIAG5vxKMknTcuvbsliYxeQa-xRFlG1mOgM-VNCsGG12sDP03VDy99vd~5nyv67bjKRXSQW4JTKR0CgaiA1UUCPNFt14Sf9FK3C-M57pnfCZdpUsFHNFGqeNL1hqMFGB1DEh0~kL6mAEtmmC5Dxj2GEsvnDYmUc8H97wH8VIH~JEa5x7~UJ7SqgZC9Wr2xrqA1IkJZJ5ytYYyb-CmjBITn1xBQsBOIgsdxCutOxEaw6d23fFg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+.custom-bullet[data-index="3"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/3dbc/1890/70393e0955890490fb63abd6cbc74720?Expires=1698019200&Signature=qlkMMWwiO7OmYUxaoKHM6BczvW7mpp0L4mAvukTSjtcKXYJq99JPqAm1d57t36SAxLaUJvOvqonVB-DVfHEfsJdMdl-OnNZ43jOM~46a6SPHcXZqsZY9EncHAL2REuEGS~mx8ksMklETHrEkKM0JGqltAbFmMfi0Vcpc6VlBfi6IJPJMvjIYd99~FYYrq~FRtbJJzXzbN~rdzYyPuVymO5wM7SrOXOzOL-RjAs~aiqMC~o0wg7zEZrutNbclDIddKGT7vHWnp--yvcHSZwQwRqf~9cWzLYGLCUOPn85DLBvo6io5YHLQz3dCa1ILcBaCEtdBfJ8sYiS0y~VpDS8EJw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+.custom-bullet[data-index="4"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/0a78/1456/d67b6be7fb932735cd4c88c669826689?Expires=1698019200&Signature=O1oo0iq4ioeUXiF--9ZKfCelXuihrAaX5DHxQXT74YVOBCJ73yhj~9NXdlIV3bim-oKJoTvpumAsOkqoA8OduCoU10zpUihUPrpHag0n1kcB8dW249K8Lxdc9ZeVlx81GvsdieBu-UN~icXKHAz2e-CQUGQNdhPMikhD8EjbuyYwxgLvk1kxcZNS30Z9LK2FjKXokkMk9ZAst62sz~wbj4tp2RWTM~J0a5p~82pyJYWFOgtSdwXpQ7Rubbjie1SeNq96Xq4tI3fJ1UrG0iS73MuDcLcxY4j4aquif29OFtUJdQr1tGdLA5GbH1WLur-cpLs7lDqDnUKXlVGwmaESzw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+.custom-bullet[data-index="5"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/d78b/af51/0079924e47642dc9625cde951f6d73eb?Expires=1698019200&Signature=dT~tW-vSzVxWBqIy98u~VKEUY4BBN17lVqLWE3Mn9alzZHmY-uVbI0nbap7NMJVbvIhp9t7Pe7WpqKF5AHkkSd-0p875Q-eReqmsy-NG3~qvNF8F9PX2JW3xha9sEBLulbTV~ogZjthCh~9oFT8AJ0CDjDpOVBXa07bTGBkDOSArFYnExUxETJk8S98wTto8Lq~mNz3eF456Z8ufh-gfY6yVG8UrZCFjIlMgkkXcft3I~1p2kwIV-6CdZaPDrwnSghSCCohL-A-hHm0X3eGsivkqtGT2SozH0kKlQD~QsOKR~Vggw-23Zw2V2Bn~zHBIgVIuZTqO9CSHoEkebVQyZA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+.custom-bullet[data-index="6"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/2b35/e6da/6c17a9f7fc574cffc176420f61e22045?Expires=1698019200&Signature=BD3abKk3JhifVjzykMk4oaz5xUBdkATgF4Zq4q54uGCXJIz4yy4FJMe7PCpN~3wI-cSWlHOsubf0IshDinpWgk~FZfTio07LnYZeBsjP1i~iyJHd0L~ObweyihkGXk7E1iIZYpzGaUBmx2S0lT-1b1fSXbZD3uS~BQCekLz1wn1e2TW34bM438CpJ8qj3Mx1XP2Trxbm~PA~9Jlr6qpmgPtTreQoP8TiTgEVmxI7E9qI9X0ea8DNJe83jaSxGY3iHDbEP4Ex2I~vcMkP9VOXw8XrgN7s2CYsH6GRx4TbziSVMysJoSyJ0J-zCHdig0~sJvzs7-hhQsHQZtfQRQQwvQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+.custom-bullet[data-index="7"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/617b/a461/818a280d3397969471500fc85534eebe?Expires=1698019200&Signature=WlUxDOx8REO0ZRgDn6Mo~Z7i2kTbwBvTQExGjuKg-cB5xI1VTLE9dgZSf5XXwJki2IxkWfg-3Kx4KGNUjjqNlYC1lFlUqRCq4bAyKkNMCFxx~htkZxWXijuvP7ByDkz6idBSFNouEjXBP8C1kkyuXwkdtwX4cjEtTAYNxFQLMW4vh3iolbqjzZmU410s~etX6DwtUpL8g5BH6hhwy80AQdPinw~C1oMXRf-0yaHtvZ5xQeC7ZuHZWBS8QWQnnqm-GvcfXMCh~AiSUgzGjz-WZ9TzVz18v61UWDRt8FIZmnTblQKK3i5vH84bu4TOiB5200gzrzNodX5WJDH6l58n2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+.custom-bullet[data-index="8"] {
+  background-image: url("https://s3-alpha-sig.figma.com/img/9f93/04b8/29f23c6b50f84f9c062369bfe28be75a?Expires=1698019200&Signature=ENcHIygSAeM-Hq3s~f5YVfpguJ6wmo5HgHoY2n~qLzeRBR21Dirx5b83eu060mszWL6FgIhIP5HYLLGAnblXjt6puYnPrlecjpoa3ANFm9leCNiqTsxPkp0GUC6Q7rklFgLnecWO95byVX0o45EphO5JT0f831-1XUx7a80oeMt1MDPbvy2rzl8HPhBl8EhOr0fKmS6rzL6GjamZVG6EovPKSgdh8dPxUJbaELC4iP~58f3YOzg7kLcM8NGVcJvsgKLdMp0fqw~mLxEthey5JGgeTjPUSorx2yc8CvMJXtskm83zZlcIhdsG7hOdY2EOedduKgT8VQX1-oRV8pOKNQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+/* Add more styles and bullets as needed */
